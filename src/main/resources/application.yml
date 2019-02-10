@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=GMT%2B8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      # create,每次程序运行都会创建一个新的表，原来的数据也会消失
+      # ddl-auto: create
+      # update:如果没有则创建，如果有则不删除数据，更新
+      ddl-auto: update
+    show-sql: true
