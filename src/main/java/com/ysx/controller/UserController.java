@@ -1,7 +1,7 @@
 package com.ysx.controller;
 
 
-import com.ysx.enums.UserEnum;
+import com.ysx.exception.UserEnum;
 import com.ysx.exception.UserException;
 import com.ysx.model.User;
 import com.ysx.service.UserService;
@@ -37,9 +37,9 @@ public class UserController {
 
     @RequestMapping("/findAll")
     public JsonResult allUser(){
-//        throw new UserException(UserEnum.JAVA);
+        throw new UserException(UserEnum.JAVA);
 //        List<User> users = userService.findAll();
-        return new JsonResult(0,"",userService.findAll()) ;
+//        return new JsonResult(0,"",userService.findAll()) ;
     }
 
     @RequestMapping("/update")

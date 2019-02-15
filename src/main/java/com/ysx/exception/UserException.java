@@ -1,6 +1,6 @@
 package com.ysx.exception;
 
-import com.ysx.enums.UserEnum;
+import com.ysx.exception.UserEnum;
 
 
 
